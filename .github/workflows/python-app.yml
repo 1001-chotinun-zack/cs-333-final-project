@@ -38,8 +38,14 @@ jobs:
       run: |
         pip install pytest pytest-cov
         pytest project_tests.py --doctest-modules --junitxml=junit/test-results.xml --cov=. --cov-report=xml:coverage_reports/coverage.xml --cov-report=html:coverage_reports
-    - name: Upload pytest test results
+    - name: Upload Coverage Reports
       uses: actions/upload-artifact@v4
       with:
-          name: pytest-results-${{ matrix.python-version }}
-          path: junit/test-results${{ matrix.python-version }}.xml
+        name: coverage-reports 
+        path: coverage_reports/
+
+    - name: Upload Test Results
+      uses: actions/upload-artifact@v4
+      with:
+        name: test-results
+        path: junit/test-results.xml
