@@ -4,6 +4,9 @@ from character_class import Character
 from roll_class import Roll
 
 class Test_Character(unittest.TestCase):
+    
+    def test_dummy(self):
+        pass
    
     def test_character_setters(self):
         character = Character("Ben", "Fire", 0, 10, 10, 10, 10 , 10)
@@ -16,7 +19,7 @@ class Test_Character(unittest.TestCase):
         character.set_wis(6)
         character.set_intl(7)
         character.set_dex(4)
-    
+
         self.assertEqual(character.get_name(), "Holly", "Name should be Holly")
         self.assertEqual(character.get_element(), "Earth", "Element should be Earth")
         self.assertEqual(character.get_level(), 1, "Level should be 1")
