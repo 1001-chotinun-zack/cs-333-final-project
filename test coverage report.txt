@@ -1,0 +1,8 @@
+Name                 Stmts   Miss  Cover
+----------------------------------------
+character_class.py      68      4    94%
+game_class.py           54     23    57%
+project_tests.py       102      0   100%
+roll_class.py           67     24    64%
+----------------------------------------
+TOTAL                  291     51    82%
